@@ -199,6 +199,22 @@ Hint: Windows:
 py -m consumers.csv_consumer_case
 ```
 
+## Task 7. New JSON Producer & Consumer functions!
+Windows:
+```shell
+.venv\Scripts\activate
+py -m producers.json_producer_fintel
+py -m consumers.json_consumer_fintel
+```
+
+## Task 8. New CSV Producer & Consumer functions!
+Windows:
+```shell
+.venv\Scripts\activate
+py -m producers.csv_producer_fintel
+py -m consumers.csv_consumer_fintel
+
+```
 ---
 
 ## How To Stop a Continuous Process
