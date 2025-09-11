@@ -215,6 +215,12 @@ py -m producers.csv_producer_fintel
 py -m consumers.csv_consumer_fintel
 
 ```
+## Quick Steps for restarting Kafka broker
+1. Open new terminal, enter "wsl"
+2. Enter the following:
+   1. cd ~/kafka
+   2. bin/kafka-server-start.sh config/kraft/server.properties
+
 ---
 
 ## How To Stop a Continuous Process
