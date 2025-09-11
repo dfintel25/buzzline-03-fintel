@@ -81,7 +81,10 @@ def check_bob_lie(message_dict: dict) -> None:
         logger.warning(
             f"⚠️ ALERT: Bob told lie #{bob_lie_count}! Message: {msg_text}"
         )
-
+# Append to CSV
+        with open("data/bob_lies.csv", "a", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow([bob_lie_count, msg_text])
 
 #####################################
 # Function to process a single message
