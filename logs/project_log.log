@@ -1,1 +1,4 @@
-2025-09-11 09:44:07 | INFO | Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-09-11 14:38:29 | INFO | Sent message to topic 'smoker_csv': {'timestamp': '2025-09-11T19:38:29.949429', 'temperature': 96.0}
+2025-09-11 14:38:29 | INFO | Processed JSON message: {'timestamp': '2025-09-11T19:38:29.949429', 'temperature': 96.0}
+2025-09-11 14:38:29 | INFO | Rolling window size: 10
+2025-09-11 14:38:29 | INFO | Max stall temperature range: 0.2 F

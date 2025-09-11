@@ -118,6 +118,7 @@ def generate_messages(file_path: pathlib.Path) -> Generator[Dict[str, Any], None
             sys.exit(3)
 
 
+
 #####################################
 # Main Function
 #####################################
