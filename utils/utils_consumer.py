@@ -34,6 +34,7 @@ def create_kafka_consumer(
     topic_provided: Optional[str] = None,
     group_id_provided: Optional[str] = None,
     value_deserializer_provided: Optional[Callable[[bytes], str]] = None,
+    consumer_timeout_ms: int = 1000
 ):
     """
     Create and return a Kafka consumer instance.
@@ -78,6 +79,7 @@ def create_kafka_consumer(
             bootstrap_servers=kafka_broker,
             auto_offset_reset="earliest",
             enable_auto_commit=True,
+            consumer_timeout_ms=1000,
             request_timeout_ms=30000,
             session_timeout_ms=15000,
             heartbeat_interval_ms=3000,
