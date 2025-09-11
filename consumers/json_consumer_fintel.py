@@ -10,8 +10,8 @@ Example serialized Kafka message
 
 Example JSON message (after deserialization) to be analyzed
 {"message": "I love Python!", "author": "Eve"}
-
 """
+
 
 #####################################
 # Import Modules
@@ -58,17 +58,34 @@ def get_kafka_consumer_group_id() -> str:
 # Set up Data Store to hold author counts
 #####################################
 
-# Initialize a dictionary to store author counts
-# The defaultdict type initializes counts to 0
-# pass in the int function as the default_factory
-# to ensure counts are integers
-# {author: count} author is the key and count is the value
 author_counts: defaultdict[str, int] = defaultdict(int)
+
+#####################################
+# Extra Data Store for Bob alerts
+#####################################
+
+bob_lie_count: int = 0
+
+
+def check_bob_lie(message_dict: dict) -> None:
+    """
+    Detect if Bob sends the specific 'lie' message.
+    Increment counter if so.
+    """
+    global bob_lie_count
+    author = message_dict.get("author", "")
+    msg_text = message_dict.get("message", "")
+
+    if author == "Bob" and msg_text == "Data Engineering is my passion":
+        bob_lie_count += 1
+        logger.warning(
+            f"⚠️ ALERT: Bob told lie #{bob_lie_count}! Message: {msg_text}"
+        )
 
 
 #####################################
 # Function to process a single message
-# #####################################
+#####################################
 
 
 def process_message(message: str) -> None:
@@ -79,25 +96,21 @@ def process_message(message: str) -> None:
         message (str): The JSON message as a string.
     """
     try:
-        # Log the raw message for debugging
         logger.debug(f"Raw message: {message}")
 
-        # Parse the JSON string into a Python dictionary
         from typing import Any
         message_dict: dict[str, Any] = json.loads(message)
 
-        # Ensure the processed JSON is logged for debugging
         logger.info(f"Processed JSON message: {message_dict}")
 
-        # Extract the 'author' field from the Python dictionary
         author = message_dict.get("author", "unknown")
         logger.info(f"Message received from author: {author}")
 
-        # Increment the count for the author
         author_counts[author] += 1
-
-        # Log the updated counts
         logger.info(f"Updated author counts: {dict(author_counts)}")
+
+        # 🔔 Check if Bob is lying
+        check_bob_lie(message_dict)
 
     except json.JSONDecodeError:
         logger.error(f"Invalid JSON message: {message}")
@@ -113,33 +126,24 @@ def process_message(message: str) -> None:
 def main() -> None:
     """
     Main entry point for the consumer.
-
-    - Reads the Kafka topic name and consumer group ID from environment variables.
-    - Creates a Kafka consumer using the `create_kafka_consumer` utility.
-    - Performs analytics on messages from the Kafka topic.
     """
     logger.info("START consumer.")
 
-    # fetch .env content
     topic = get_kafka_topic()
     group_id = get_kafka_consumer_group_id()
     logger.info(f"Consumer: Topic '{topic}' and group '{group_id}'...")
 
-    # Create the Kafka consumer using the helpful utility function.
     consumer = create_kafka_consumer(topic, group_id)
 
-    # Poll and process messages
     logger.info(f"Polling messages from topic '{topic}'...")
     try:
         while True:
-            # poll returns a dict: {TopicPartition: [ConsumerRecord, ...], ...}
             records = consumer.poll(timeout_ms=1000, max_records=100)
             if not records:
                 continue
 
             for _tp, batch in records.items():
                 for msg in batch:
-                    # value_deserializer in utils_consumer already decoded this to str
                     message_str: str = msg.value
                     logger.debug(f"Received message at offset {msg.offset}: {message_str}")
                     process_message(message_str)
@@ -149,16 +153,14 @@ def main() -> None:
         logger.error(f"Error while consuming messages: {e}")
     finally:
         consumer.close()
-        
+
     logger.info(f"Kafka consumer for topic '{topic}' closed.")
-
     logger.info(f"END consumer for topic '{topic}' and group '{group_id}'.")
-
+    
 
 #####################################
 # Conditional Execution
 #####################################
 
-# Ensures this script runs only when executed directly (not when imported as a module).
 if __name__ == "__main__":
     main()
