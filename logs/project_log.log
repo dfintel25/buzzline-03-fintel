@@ -1,2 +1,62 @@
-2025-09-11 14:51:07 | INFO | Rolling window size: 10
-2025-09-11 14:51:07 | INFO | Sent message to topic 'smoker_csv': {'timestamp': '2025-09-11T19:51:07.153378', 'machine_id': 'GreenEgg 2', 'temperature': 84.0}
+2025-09-11 15:17:38 | INFO | Processed JSON message: {'timestamp': '2025-09-11T20:17:38.690567', 'machine_id': 'GreenEgg 2', 'temperature': 115.2}
+2025-09-11 15:17:38 | INFO | Rolling window size: 10
+2025-09-11 15:17:38 | INFO | Max stall temperature range: 0.2 F
+2025-09-11 15:17:39 | INFO | Sent message to topic 'buzzline_json': {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-09-11 15:17:39 | INFO | Processed JSON message: {'message': 'Buzz messages for everyone.', 'author': 'Bob'}
+2025-09-11 15:17:39 | INFO | Message received from author: Bob
+2025-09-11 15:17:39 | INFO | Updated author counts: {'Eve': 397, 'Alice': 562, 'Charlie': 350, 'Diana': 632, 'Bob': 397}
+2025-09-11 15:17:40 | INFO | Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-09-11 15:17:40 | INFO | Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Diana'}
+2025-09-11 15:17:40 | INFO | Message received from author: Diana
+2025-09-11 15:17:40 | INFO | Updated author counts: {'Eve': 397, 'Alice': 562, 'Charlie': 350, 'Diana': 633, 'Bob': 397}
+2025-09-11 15:17:41 | INFO | Sent message to topic 'buzzline_json': {'message': 'Have a great day!', 'author': 'Diana'}
+2025-09-11 15:17:41 | INFO | Processed JSON message: {'message': 'Have a great day!', 'author': 'Diana'}
+2025-09-11 15:17:41 | INFO | Message received from author: Diana
+2025-09-11 15:17:41 | INFO | Updated author counts: {'Eve': 397, 'Alice': 562, 'Charlie': 350, 'Diana': 634, 'Bob': 397}
+2025-09-11 15:17:42 | INFO | Sent message to topic 'buzzline_json': {'message': 'I love Python!', 'author': 'Alice'}
+2025-09-11 15:17:42 | INFO | Processed JSON message: {'message': 'I love Python!', 'author': 'Alice'}
+2025-09-11 15:17:42 | INFO | Message received from author: Alice
+2025-09-11 15:17:42 | INFO | Updated author counts: {'Eve': 397, 'Alice': 563, 'Charlie': 350, 'Diana': 634, 'Bob': 397}
+2025-09-11 15:17:43 | INFO | Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Charlie'}
+2025-09-11 15:17:43 | INFO | Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Charlie'}
+2025-09-11 15:17:43 | INFO | Message received from author: Charlie
+2025-09-11 15:17:43 | INFO | Updated author counts: {'Eve': 397, 'Alice': 563, 'Charlie': 351, 'Diana': 634, 'Bob': 397}
+2025-09-11 15:17:43 | INFO | Sent message to topic 'smoker_csv': {'timestamp': '2025-09-11T20:17:43.693435', 'machine_id': 'Traeger', 'temperature': 115.6}
+2025-09-11 15:17:43 | INFO | Processed JSON message: {'timestamp': '2025-09-11T20:17:43.693435', 'machine_id': 'Traeger', 'temperature': 115.6}
+2025-09-11 15:17:43 | INFO | Rolling window size: 10
+2025-09-11 15:17:43 | INFO | Max stall temperature range: 0.2 F
+2025-09-11 15:17:44 | INFO | Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-09-11 15:17:44 | INFO | Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-09-11 15:17:44 | INFO | Message received from author: Alice
+2025-09-11 15:17:44 | INFO | Updated author counts: {'Eve': 397, 'Alice': 564, 'Charlie': 351, 'Diana': 634, 'Bob': 397}
+2025-09-11 15:17:45 | INFO | Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-09-11 15:17:45 | INFO | Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Diana'}
+2025-09-11 15:17:45 | INFO | Message received from author: Diana
+2025-09-11 15:17:45 | INFO | Updated author counts: {'Eve': 397, 'Alice': 564, 'Charlie': 351, 'Diana': 635, 'Bob': 397}
+2025-09-11 15:17:46 | INFO | Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-09-11 15:17:46 | INFO | Processed JSON message: {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-09-11 15:17:46 | INFO | Message received from author: Alice
+2025-09-11 15:17:46 | INFO | Updated author counts: {'Eve': 397, 'Alice': 565, 'Charlie': 351, 'Diana': 635, 'Bob': 397}
+2025-09-11 15:17:47 | INFO | Sent message to topic 'buzzline_json': {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-09-11 15:17:47 | INFO | Processed JSON message: {'message': 'JSON makes life easier.', 'author': 'Bob'}
+2025-09-11 15:17:47 | INFO | Message received from author: Bob
+2025-09-11 15:17:47 | INFO | Updated author counts: {'Eve': 397, 'Alice': 565, 'Charlie': 351, 'Diana': 635, 'Bob': 398}
+2025-09-11 15:17:48 | INFO | Sent message to topic 'buzzline_json': {'message': 'This is a buzz message.', 'author': 'Bob'}
+2025-09-11 15:17:48 | INFO | Processed JSON message: {'message': 'This is a buzz message.', 'author': 'Bob'}
+2025-09-11 15:17:48 | INFO | Message received from author: Bob
+2025-09-11 15:17:48 | INFO | Updated author counts: {'Eve': 397, 'Alice': 565, 'Charlie': 351, 'Diana': 635, 'Bob': 399}
+2025-09-11 15:17:48 | WARNING | Producer interrupted by user.
+2025-09-11 15:17:48 | INFO | Kafka producer closed.
+2025-09-11 15:17:48 | INFO | END producer.
+2025-09-11 15:17:48 | INFO | Sent message to topic 'smoker_csv': {'timestamp': '2025-09-11T20:17:48.698534', 'machine_id': 'GreenEgg 1', 'temperature': 116.0}
+2025-09-11 15:17:48 | INFO | Processed JSON message: {'timestamp': '2025-09-11T20:17:48.698534', 'machine_id': 'GreenEgg 1', 'temperature': 116.0}
+2025-09-11 15:17:48 | INFO | Rolling window size: 10
+2025-09-11 15:17:48 | INFO | Max stall temperature range: 0.2 F
+2025-09-11 15:17:51 | WARNING | Consumer interrupted by user.
+2025-09-11 15:17:51 | INFO | Kafka consumer for topic 'buzzline_json' closed.
+2025-09-11 15:17:51 | INFO | END consumer for topic 'buzzline_json' and group 'buzz_group'.
+2025-09-11 15:17:53 | WARNING | Producer interrupted by user.
+2025-09-11 15:17:53 | INFO | Kafka producer closed.
+2025-09-11 15:17:53 | INFO | END producer.
+2025-09-11 15:17:55 | WARNING | Consumer interrupted by user.
+2025-09-11 15:17:56 | INFO | Kafka consumer for topic 'smoker_csv' closed.
