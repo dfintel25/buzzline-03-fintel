@@ -105,6 +105,7 @@ def generate_messages(file_path: pathlib.Path):
                     current_timestamp = datetime.utcnow().isoformat()
                     message = {
                         "timestamp": current_timestamp,
+                        "machine_id": row["machine_id"],
                         "temperature": float(row["temperature"]),
                     }
                     logger.debug(f"Generated message: {message}")

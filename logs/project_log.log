@@ -1,4 +1,7 @@
-2025-09-11 14:38:29 | INFO | Sent message to topic 'smoker_csv': {'timestamp': '2025-09-11T19:38:29.949429', 'temperature': 96.0}
-2025-09-11 14:38:29 | INFO | Processed JSON message: {'timestamp': '2025-09-11T19:38:29.949429', 'temperature': 96.0}
-2025-09-11 14:38:29 | INFO | Rolling window size: 10
-2025-09-11 14:38:29 | INFO | Max stall temperature range: 0.2 F
+2025-09-11 14:49:27 | INFO | Processed JSON message: {'timestamp': '2025-09-11T19:49:27.041836', 'machine_id': 'Traeger', 'temperature': 76.0}
+2025-09-11 14:49:27 | INFO | Rolling window size: 10
+2025-09-11 14:49:27 | INFO | Max stall temperature range: 0.2 F
+2025-09-11 14:49:27 | INFO | Sent message to topic 'buzzline_json': {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-09-11 14:49:27 | INFO | Processed JSON message: {'message': 'Streaming data is fun.', 'author': 'Eve'}
+2025-09-11 14:49:27 | INFO | Message received from author: Eve
+2025-09-11 14:49:27 | INFO | Updated author counts: {'Eve': 110, 'Alice': 158, 'Charlie': 96, 'Diana': 177, 'Bob': 112}

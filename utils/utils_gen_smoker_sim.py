@@ -40,6 +40,6 @@ data = pd.DataFrame({
 })
 
 # Save to CSV
-csv_file_path = "smoker_temps.csv"
+csv_file_path = "data/smoker_temps.csv"
 data.to_csv(csv_file_path, index=False)
 print(f"CSV written to {csv_file_path}")
